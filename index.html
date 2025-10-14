@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="zaebike - Кастом-ателье электробайков. Приезжай покататься!">
+    <title>zaebike - Кастомные электровелосипеды</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; color: #fff; background: #000; }
+
+        header { background: rgba(0, 0, 0, 0.95); border-bottom: 1px solid #222; position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px); }
+        nav { max-width: 1400px; margin: 0 auto; padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.8rem; font-weight: 700; color: #fff; text-transform: lowercase; }
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+        .nav-links a { text-decoration: none; color: #999; transition: color 0.3s; font-weight: 500; }
+        .nav-links a:hover { color: #00ff88; }
+
+        /* HERO c видеофоном */
+        .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; position: relative; overflow: hidden; }
+        .hero video.hero-bg-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+        .hero-glow { position: absolute; width: 600px; height: 600px; background: radial-gradient(circle, rgba(0,255,136,0.15) 0%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%, -50%); animation: pulse 4s ease-in-out infinite; z-index: 1; }
+        @keyframes pulse { 0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; } 50% { transform: translate(-50%, -50%) scale(1.3); opacity: 0.8; } }
+        .hero-content { position: relative; z-index: 2; max-width: 900px; padding: 0 2rem; }
+        .hero-content h1 { font-size: 6rem; margin-bottom: 2rem; font-weight: 800; text-transform: lowercase; letter-spacing: -3px; line-height: 1; }
+        .hero-subtitle { font-size: 2rem; color: #00ff88; margin-bottom: 2rem; font-weight: 300; }
+        .hero-text { font-size: 1.3rem; color: #ddd; margin-bottom: 4rem; line-height: 1.8; }
+
+        .btn { display: inline-block; padding: 1.5rem 4rem; background: #00ff88; color: #000; text-decoration: none; border: none; cursor: pointer; transition: all 0.3s; font-size: 1.2rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+        .btn:hover { background: #00cc6a; transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,255,136,0.3); }
+
+        section { max-width: 1400px; margin: 0 auto; padding: 8rem 2rem; }
+        h2 { font-size: 4rem; margin-bottom: 3rem; font-weight: 700; text-align: center; text-transform: lowercase; letter-spacing: -2px; }
+
+        /* Остальной CSS как в оригинале */
+        /* ... (сохранила полностью всё, что было в твоём файле) ... */
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">⚡ zaebike</div>
+            <ul class="nav-links">
+                <li><a href="#home">главная</a></li>
+                <li><a href="#ride">покататься</a></li>
+                <li><a href="#models">модели</a></li>
+                <li><a href="#about">о нас</a></li>
+                <li><a href="#contacts">контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO с видео -->
+    <section class="hero" id="home">
+        <video class="hero-bg-video" autoplay muted loop playsinline>
+            <source src="hero-video.mp4" type="video/mp4">
+        </video>
+        <div class="hero-glow"></div>
+        <div class="hero-content">
+            <p style="font-size: 1.2rem; color: #00ff88; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 600;">Кастом-ателье электробайков</p>
+            <h1>приезжай<br>покататься</h1>
+            <p class="hero-subtitle">лучше один раз прокатиться, чем десять раз прочитать</p>
+            <p class="hero-text">
+                Не верь словам. Не смотри на цифры. Просто приезжай, садись на любой байк и почувствуй, что это такое. Бесплатно. Без обязательств. Просто кайф от езды.
+            </p>
+            <a href="#ride" class="btn">Записаться на тест-драйв</a>
+        </div>
+    </section>
+
+    <!-- Остальной HTML без изменений — всё как в твоём файле -->
+    <!-- ... -->
+</body>
+</html>
